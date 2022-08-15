@@ -23,7 +23,17 @@ body {
         bottom: 0;
         width: 100%;
         text-align: center;
-      
+}
+.result {
+    display: flex;
+    justify-content: center;
+    height: 160px;
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
 }
 .player,.computer {
     display: flex;

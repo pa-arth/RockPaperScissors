@@ -17,14 +17,14 @@
             <h3>Player</h3> 
             <div id = "playerScore"></div>
             <div id = "buttons">
-                <button class = "rock" onclick="clicked()"> <p>Rock </p>
+                <button class = "rock" onclick="playGame(this);"> <p>Rock </p>
                     <img src="https://png.pngtree.com/png-clipart/20210108/ourlarge/pngtree-block-rock-clip-art-png-image_2689543.jpg" alt="Rock">
                 </button>
-                <button class = "paper">
+                <button class = "paper" onclick="playGame(this);">
                     <p>Paper</p>
                     <img src="https://flyclipart.com/thumb2/blank-white-paper-cartoon-clip-art-116976.png" alt="Paper">
                 </button>
-                <button class = "scissors">
+                <button class = "scissors" onclick="playGame(this);">
                     <p>Scissors</p>
                     <img src="https://assets.stickpng.com/images/58a1e9e9c8dd3432c6fa81c8.png" alt="Scissors">
                 </button>
@@ -48,6 +48,7 @@
             </div>
         </div>
     </div>
+    <div class = "result"></div>
     <div class = "footer">
         Copyright © Paarth Jamdagneya 2022
     </div>

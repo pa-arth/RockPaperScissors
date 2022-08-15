@@ -5,10 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src = "script.js"> </script>
+    
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    
+    <div class = "header">
+        <h1>Rock Paper Scissors!</h1>
+    </div>
+    <div class = "middle">
+        <div class = "player"> 
+            <h3>Player</h3> 
+            <div id = "playerScore"></div>
+            <div id = "buttons">
+                <button class = "rock" onclick="clicked()"> <p>Rock </p>
+                    <img src="https://png.pngtree.com/png-clipart/20210108/ourlarge/pngtree-block-rock-clip-art-png-image_2689543.jpg" alt="Rock">
+                </button>
+                <button class = "paper">
+                    <p>Paper</p>
+                    <img src="https://flyclipart.com/thumb2/blank-white-paper-cartoon-clip-art-116976.png" alt="Paper">
+                </button>
+                <button class = "scissors">
+                    <p>Scissors</p>
+                    <img src="https://assets.stickpng.com/images/58a1e9e9c8dd3432c6fa81c8.png" alt="Scissors">
+                </button>
+            </div>
+        </div>
+        <div class = "computer">
+            <h3>Computer</h3>
+            <div id = "compScore"></div>
+            <div id = "buttons">
+                <button class = "crock"> <p>Rock </p>
+                    <img src="https://png.pngtree.com/png-clipart/20210108/ourlarge/pngtree-block-rock-clip-art-png-image_2689543.jpg" alt="Rock">
+                </button>
+                <button class = "cpaper">
+                    <p>Paper</p>
+                    <img src="https://flyclipart.com/thumb2/blank-white-paper-cartoon-clip-art-116976.png" alt="Paper">
+                </button>
+                <button class = "cscissors">
+                    <p>Scissors</p>
+                    <img src="https://assets.stickpng.com/images/58a1e9e9c8dd3432c6fa81c8.png" alt="Scissors">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class = "footer">
+        Copyright © Paarth Jamdagneya 2022
+    </div>
+    <script src = "script.js"></script>
 </body>
 </html>

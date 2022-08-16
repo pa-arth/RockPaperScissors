@@ -6,6 +6,17 @@ function getComputerChoice () {
     return arr[index];
 }
 
+function checkWinner () {
+    if (playerScore == 5) {
+        document.querySelector('.middle').style.display = "none"
+        result.textContent = "Game Over! You beat the computer!"
+    }
+    else if (computerScore == 5) {
+        document.querySelector('.middle').style.display = "none"
+        result.textContent = "Game Over! You lost to the computer!"
+    }
+}
+
 let computerChoice; 
 let playerScore = 0;
 let computerScore = 0;
@@ -13,36 +24,34 @@ let computerScore = 0;
 rock = document.querySelector('.rock')
 crock = document.querySelector('.crock')
 scissors = document.querySelector('.scissors')
-csissors = document.querySelector('.cscissors')
+cscissors = document.querySelector('.cscissors')
 paper = document.querySelector('.paper')
 cpaper = document.querySelector('.cpaper')
 result = document.querySelector('.result')
 // document.querySelector('.rock').style.outline = none;
 // document.querySelector('.rock').onclick = clicked();
 
-
-
 function playGame (playerInput) {
     rock.style.outline = "none"
     crock.style.outline = "none"
     scissors.style.outline = "none"
-    csissors.style.outline = "none"
+    cscissors.style.outline = "none"
     paper.style.outline = "none"
     cpaper.style.outline = "none"
     playerChoice = playerInput.className
     playerInput.style.outline = "1px solid blue"
     computerChoice = getComputerChoice();
-    console.log(computerChoice)
-    console.log(playerChoice)
+    console.log("Computer choice", computerChoice)
+    console.log("Player choice", playerChoice)
     if (computerChoice == "Rock") {
         crock.style.outline = "1px solid blue"
         if (playerChoice == "scissors") {
             computerScore++
-            result.textContent = "You lose"
+            result.textContent = "You lose!"
         }
-        else if (playerChoice = "paper") {
+        else if (playerChoice == "paper") {
             playerScore++
-            result.textContent = "You win"
+            result.textContent = "You win!"
         }
         else {
             result.textContent = "It's a tie!"
@@ -52,11 +61,11 @@ function playGame (playerInput) {
         cpaper.style.outline = "1px solid blue"
         if (playerChoice == "rock") {
             computerScore++
-            result.textContent = "You lose"
+            result.textContent = "You lose!"
         }
-        else if (playerChoice = "scissors") {
+        else if (playerChoice == "scissors") {
             playerScore++
-            result.textContent = "You win"
+            result.textContent = "You win!"
         }
         else {
             result.textContent = "It's a tie!"
@@ -66,11 +75,11 @@ function playGame (playerInput) {
         cscissors.style.outline = "1px solid blue"
         if (playerChoice == "paper") {
             computerScore++
-            result.textContent = "You lose"
+            result.textContent = "You lose!"
         }
-        else if (playerChoice = "rock") {
+        else if (playerChoice == "rock") {
             playerScore++
-            result.textContent = "You win"
+            result.textContent = "You win!"
         }
         else {
             result.textContent = "It's a tie!"
@@ -83,6 +92,6 @@ function playGame (playerInput) {
     console.log(compPoints)
     compPoints.textContent = `Computer score: ${computerScore}`
     // document.button.style.outline = "none"
-    
+    checkWinner();
 }
     

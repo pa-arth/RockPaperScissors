@@ -1,1 +1,2 @@
 # RockPaperScissors
+Created a game of rock paper scissors. I was supposed to create the game in the console completely, but I didn't read that part of the directions, so after a few google searches and some inspiration from previous projects, I created a basic version of rock paper scissors with a complte UI. Will be coming back later when it's actually time to add a fully fledged UI and make the game a little more interesting.

@@ -4,7 +4,13 @@ body {
     justify-content: space-between;
     margin: 0;
     padding: 0;
-    gap: 60px;
+    gap: 120px;
+    background-color: beige;
+    color: #FFDB58;
+    font-family: 'Courier New', Courier, monospace;
+}
+h1 {
+    font-size: 48px;
 }
 .middle {
     display: flex;
@@ -23,6 +29,7 @@ body {
         bottom: 0;
         width: 100%;
         text-align: center;
+        color: black;
 }
 .result {
     display: flex;
@@ -32,25 +39,32 @@ body {
     text-align: center;
     font-size: 40px;
     font-weight: bold;
-    background-color: black;
+
     color: white;
 }
 .player,.computer {
     display: flex;
     flex-direction: column;
-    border: 2px solid black;
-    color: black;
-    flex-grow: 1;
+    align-items: center ;
+    font-size: 24px;
+    height:500px;
+    width: auto;
+    /* flex-grow: 1; */
 }
 #buttons {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     margin-top: 16px;
     gap: 32px;
 }
 button {
-    width: 80px;
-    height: auto;
+    margin-top: 40px;
+    width: 180px;
+    height: 170px;
+    background-color: #fadadd;
+    font-family: 'Allerta Stencil';
+    color: white;
+    box-shadow: none;
 }
 img {
     height: 30px;

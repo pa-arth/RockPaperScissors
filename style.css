@@ -12,6 +12,13 @@ body {
 h1 {
     font-size: 48px;
 }
+.sub {
+    font-size: 28px;
+    color: red;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
 .middle {
     display: flex;
     justify-content: space-evenly;
@@ -22,6 +29,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 .footer {
         position: fixed;
@@ -65,6 +73,12 @@ button {
     font-family: 'Allerta Stencil';
     color: white;
     box-shadow: none;
+    border: none;
+}
+button .clickstyle {
+    border-style: solid;
+    border-color: blue;
+    border-width: 3px;
 }
 img {
     height: 30px;

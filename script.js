@@ -21,30 +21,41 @@ let computerChoice;
 let playerScore = 0;
 let computerScore = 0;
 
-rock = document.querySelector('.rock')
-crock = document.querySelector('.crock')
-scissors = document.querySelector('.scissors')
-cscissors = document.querySelector('.cscissors')
-paper = document.querySelector('.paper')
-cpaper = document.querySelector('.cpaper')
-result = document.querySelector('.result')
+let buttons = document.querySelectorAll('button');
+rock = document.querySelector('.rock');
+crock = document.querySelector('.crock');
+scissors = document.querySelector('.scissors');
+cscissors = document.querySelector('.cscissors');
+paper = document.querySelector('.paper');
+cpaper = document.querySelector('.cpaper');
+result = document.querySelector('.result');
 // document.querySelector('.rock').style.outline = none;
 // document.querySelector('.rock').onclick = clicked();
 
+let buttarray = Array.from (buttons);
+
+function animate (e) {
+    e.classList.add("clickstyle");
+    console.log(e.classList);
+    setTimeout(e.classList.remove("clickstyle"), 500)
+    playGame(e);
+    console.log(e.className);
+};
+
+buttarray.forEach(element => {
+    element.addEventListener("click", function () {animate(element)}, false);
+    console.log(element);
+});
+
+
 function playGame (playerInput) {
-    rock.style.outline = "none"
-    crock.style.outline = "none"
-    scissors.style.outline = "none"
-    cscissors.style.outline = "none"
-    paper.style.outline = "none"
-    cpaper.style.outline = "none"
     playerChoice = playerInput.className
-    playerInput.style.outline = "1px solid blue"
+
     computerChoice = getComputerChoice();
     console.log("Computer choice", computerChoice)
     console.log("Player choice", playerChoice)
     if (computerChoice == "Rock") {
-        crock.style.outline = "1px solid blue"
+
         if (playerChoice == "scissors") {
             computerScore++
             result.textContent = "You lose!"
@@ -58,7 +69,7 @@ function playGame (playerInput) {
         }
     }
     else if (computerChoice == "Paper") {
-        cpaper.style.outline = "1px solid blue"
+
         if (playerChoice == "rock") {
             computerScore++
             result.textContent = "You lose!"
@@ -72,7 +83,7 @@ function playGame (playerInput) {
         }
     }
     else {
-        cscissors.style.outline = "1px solid blue"
+       
         if (playerChoice == "paper") {
             computerScore++
             result.textContent = "You lose!"
@@ -91,7 +102,6 @@ function playGame (playerInput) {
     const compPoints = document.querySelector("#compScore")
     console.log(compPoints)
     compPoints.textContent = `Computer score: ${computerScore}`
-    // document.button.style.outline = "none"
     checkWinner();
 }
     

@@ -48,7 +48,7 @@ h1 {
     font-size: 40px;
     font-weight: bold;
 
-    color: white;
+    color: #FFDB58;
 }
 .player,.computer {
     display: flex;
@@ -74,12 +74,20 @@ button {
     color: white;
     box-shadow: none;
     border: none;
+    transition: all 0.1s ease;
+
+    
 }
-button .clickstyle {
-    border-style: solid;
-    border-color: blue;
-    border-width: 3px;
+button.clickstyle:hover {
+    border: 3px solid blue;
+    transform: scale(1.1);
+
 }
+
+button.again {
+    display: none;
+}
+
 img {
     height: 30px;
     width: auto;

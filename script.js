@@ -9,7 +9,9 @@ function getComputerChoice () {
 function checkWinner () {
     if (playerScore == 5) {
         document.querySelector('.middle').style.display = "none"
-        result.textContent = "Game Over! You beat the computer!"
+        
+        result.textContent = "Game Over! You beat the computer!";
+       
     }
     else if (computerScore == 5) {
         document.querySelector('.middle').style.display = "none"
@@ -21,6 +23,7 @@ let computerChoice;
 let playerScore = 0;
 let computerScore = 0;
 
+let play = document.querySelector('.again');
 let buttons = document.querySelectorAll('button');
 rock = document.querySelector('.rock');
 crock = document.querySelector('.crock');
@@ -29,6 +32,7 @@ cscissors = document.querySelector('.cscissors');
 paper = document.querySelector('.paper');
 cpaper = document.querySelector('.cpaper');
 result = document.querySelector('.result');
+texter = document.querySelector('.text');
 // document.querySelector('.rock').style.outline = none;
 // document.querySelector('.rock').onclick = clicked();
 
@@ -36,20 +40,20 @@ let buttarray = Array.from (buttons);
 
 function animate (e) {
     e.classList.add("clickstyle");
-    console.log(e.classList);
-    setTimeout(e.classList.remove("clickstyle"), 500)
-    playGame(e);
-    console.log(e.className);
 };
 
 buttarray.forEach(element => {
-    element.addEventListener("click", function () {animate(element)}, false);
+    element.addEventListener("mouseover", function () {animate(element)}, false);
     console.log(element);
+});
+
+buttarray.forEach(element => {
+    element.addEventListener("click", function () {playGame(element)}, false);
 });
 
 
 function playGame (playerInput) {
-    playerChoice = playerInput.className
+    playerChoice = playerInput.classList[0]
 
     computerChoice = getComputerChoice();
     console.log("Computer choice", computerChoice)
@@ -97,10 +101,8 @@ function playGame (playerInput) {
         }
     }
     const playerPoints = document.querySelector("#playerScore")
-    console.log(playerPoints)
     playerPoints.textContent = `Player score: ${playerScore}`
     const compPoints = document.querySelector("#compScore")
-    console.log(compPoints)
     compPoints.textContent = `Computer score: ${computerScore}`
     checkWinner();
 }

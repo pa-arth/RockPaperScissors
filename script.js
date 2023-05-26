@@ -8,14 +8,14 @@ function getComputerChoice () {
 
 function checkWinner () {
     if (playerScore == 5) {
-        document.querySelector('.middle').style.display = "none"
-        
+        document.querySelector('.middle').style.display = "none";
         result.textContent = "Game Over! You beat the computer!";
-       
+        play.style.display = "block";
     }
     else if (computerScore == 5) {
-        document.querySelector('.middle').style.display = "none"
+        document.querySelector('.middle').style.display = "none";
         result.textContent = "Game Over! You lost to the computer!"
+        play.style.display = "block";
     }
 }
 
@@ -36,7 +36,18 @@ texter = document.querySelector('.text');
 // document.querySelector('.rock').style.outline = none;
 // document.querySelector('.rock').onclick = clicked();
 
+// play.onclick = location.reload();
+
+// function playAgain () {
+//     result.textContent = "";
+//     document.querySelector('.middle').style.display = "flex";
+//     play.style.display = "none";
+//     playerScore = 0;
+//     computerScore = 0;
+// }
+
 let buttarray = Array.from (buttons);
+buttarray.pop();
 
 function animate (e) {
     e.classList.add("clickstyle");
